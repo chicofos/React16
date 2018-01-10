@@ -43,7 +43,7 @@ class App extends Component {
       padding: '8px',
       cursor: 'pointer'
     };
-
+ 
     return (
       <div className="App">
         <button 
