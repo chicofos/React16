@@ -5,13 +5,42 @@ import Cockpit from '../components/Cockpit/Cockpit';
 
 class App extends Component {
 
-  state = {
-    persons : [
-      { id: '23asd', name: 'Max', age : 28 },
-      { id: '3323', name: 'Louis', age : 48 },
-      { id: '123sd', name: 'Alex', age : 12 }
-    ],
-    showPersons : false
+  constructor(props) {
+    super(props);
+    console.log('[App.js] inside constructor', props)
+    this.state = {
+      persons : [
+        { id: '23asd', name: 'Max', age : 28 },
+        { id: '3323', name: 'Louis', age : 48 },
+        { id: '123sd', name: 'Alex', age : 12 }
+      ],
+      showPersons : false
+    }
+  }
+
+  componentWillMount(){
+    console.log('[App.js] inside componentWillMount')
+  }
+
+  componentDidMount(){
+    console.log('[App.js] inside componentDidMount')
+  }
+
+  componentWillReceiveProps(nextProps){
+    console.log('Update Persons.js inside ComponentWillreceiveProps', nextProps);
+  }
+
+  shouldComponentUpdate(nextProps, nextState){
+    console.log('Update Persons.js inside shouldComponentUpdate', nextProps, nextState);
+    return true;
+  }
+
+  componentWillUpdate(nextProps, nextState){
+    console.log('Update Persons.js inside componentWillUpdate', nextProps, nextState);
+  }
+
+  componentDidUpdate(){
+    console.log('Update Persons.js inside componentDidUpdate');
   }
 
   nameChangedHandler = (event, id) => {
@@ -46,7 +75,7 @@ class App extends Component {
   
 
   render() {
-
+    console.log('[App.js] inside render')
     let persons = null;
 
     if(this.state.showPersons) {
