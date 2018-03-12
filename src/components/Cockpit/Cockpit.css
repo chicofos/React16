@@ -6,7 +6,7 @@
     font-weight: bold;
   }
   
-  .Cockpit button{
+  .Cockpit{
     background-color: green;
     font : inherit;
     border: 1px solid blue;
@@ -19,7 +19,7 @@
     color:black;
   }
   
-  .Cockpit button.Red{
+  .Cockpit button .Red{
     background-color: red;
   }
   

@@ -5,7 +5,7 @@ import Aux from '../../hoc/Aux';
 const cockpit = (props) => {
 
     let assignedClasses = [];
-    let btnClass = '';
+    let btnClass = classes.Cockpit;
     
     if(props.showPersons){
         btnClass = classes.Red;
